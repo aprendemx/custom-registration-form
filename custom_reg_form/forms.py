@@ -1,7 +1,7 @@
 from .models import ExtraInfo
 from django.conf import settings
 from django.forms import ModelForm
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 
 
