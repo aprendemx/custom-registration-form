@@ -74,9 +74,19 @@ OCUPACION = (
     ('7', "OTRO")
 
 )
+MAX_NIVEL_ESTUDIOS = (
+    ('0', "Preescolar"),
+    ('1', "Primaria"),
+    ('2', "Secundaria"),
+    ('3', "Preparatoria o Bachillerato"),
+    ('4', "Técnica-Profesional"),
+    ('5', "Licenciatura"),
+    ('6', "Especialidad"),
+    ('7', "Maestría"),
+    ('8', "Doctorado"),
+    ('9', "Ninguna educación formal")
 
-
-
+)
 
 class ExtraInfo(models.Model):
     """
@@ -114,6 +124,12 @@ class ExtraInfo(models.Model):
     
     asignatura = models.CharField(default="", blank=True, max_length=120, verbose_name="Asignatura que imparte")
     cuentanos = models.TextField(default="", blank=True , verbose_name="Cuéntenos por que está interesado en MéxicoX")
+    curp = models.CharField(max_length=20,default="", blank=True , verbose_name="Clave Única de Registro de población: CURP")
+    maximo_nivel = models.CharField(max_length=5, default='0', choices=MAX_NIVEL_ESTUDIOS, blank=True,
+                               verbose_name="Nivel educativo que imparte")
+    pais = models.CharField(max_length=5, default='MX', blank=True,
+                               verbose_name="País de residencia")
+
 
     user = models.OneToOneField(USER_MODEL, null=True, on_delete=models.DO_NOTHING)
 
