@@ -21,9 +21,11 @@ NIVELES=(
 FUNCIONES = (
             ('0',"DOCENTE FRENTE A GRUPO"),
             ('1',"ADMINSTRATIVAS"),
+            ('5', "SUPERVICIÓN"),
+            ('6', "ASESOR TÉCNICO PEDAGÓGICO"),
             ('2',"DIRECTIVAS"),
             ('3',"TÉCNICAS"),
-            ('4',"OTRAS")
+            ('4',"OTRAS"),
 
         )
 
@@ -71,6 +73,7 @@ OCUPACION = (
     ('4', "COMERCIAL"),
     ('5', "GOBIERNO"),
     ('6', "SALUD"),
+    ('8', "PRODUCCIÓN AUDIOVISUAL"),
     ('7', "OTRO")
 
 )
