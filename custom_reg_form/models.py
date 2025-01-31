@@ -128,6 +128,7 @@ class ExtraInfo(models.Model):
     asignatura = models.CharField(default="", blank=True, max_length=120, verbose_name="Asignatura que imparte")
     cuentanos = models.TextField(default="", blank=True , verbose_name="Cuéntenos por que está interesado en MéxicoX")
     curp = models.CharField(max_length=20,default="", blank=True , verbose_name="Clave Única de Registro de población: CURP")
+    dni = models.CharField(max_length=20,default="", blank=True , verbose_name="ID/DNI")
     maximo_nivel = models.CharField(max_length=5, default='0', choices=MAX_NIVEL_ESTUDIOS, blank=True,
                                verbose_name="Nivel educativo que imparte")
     pais = models.CharField(max_length=5, default='MX', blank=True,
