@@ -19,4 +19,5 @@ class ExtraInfoForm(ModelForm):
 
     class Meta(object):
         model = ExtraInfo
-        fields = ("nombres","primer_apellido","segundo_apellido","estado","municipio", "ocupacion","eres_docente","cct","funcion","nivel_Educativo","asignatura")
+        fields = ("nombres",
+                  "primer_apellido","segundo_apellido","estado","municipio", "ocupacion","eres_docente","cct","funcion","nivel_Educativo","asignatura",'dni','curp','cuentanos','maximo_nivel','pais')
