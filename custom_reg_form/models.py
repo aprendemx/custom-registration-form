@@ -100,7 +100,8 @@ class ExtraInfo(models.Model):
     
     nombres = models.CharField(default="", max_length=220, verbose_name="Nombre(s) (*) ")
     primer_apellido = models.CharField(default="", max_length=120, verbose_name="Primer Apellido (*)")
-    segundo_apellido = models.CharField(default="", max_length=120, verbose_name="Segundo Apellido")
+    # Opcional: hay personas con un solo apellido (Llave MX lo manda vacío).
+    segundo_apellido = models.CharField(default="", blank=True, max_length=120, verbose_name="Segundo Apellido")
 
     estado =  models.CharField(max_length=128,default='0', choices=ESTADOS_MX, verbose_name="Estado de residencia (*)")
     
